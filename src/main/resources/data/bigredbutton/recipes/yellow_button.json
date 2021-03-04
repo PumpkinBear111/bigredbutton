@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "asa",
+    "grg",
+    "tdt"
+  ],
+  "key":
+  {
+    "t":
+    {
+      "item": "minecraft:tnt"
+    },
+    "a":
+    {
+      "item": "minecraft:air"
+    },
+    "r":
+    {
+      "item": "minecraft:redstone"
+    },
+    "g":
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    "s":
+    {
+      "item": "minecraft:stone_button"
+    },
+    "d":
+    {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result":
+  {
+    "item": "bigredbutton:yellow_button_item",
+    "count": 1
+  }
+}
