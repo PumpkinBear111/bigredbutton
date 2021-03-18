@@ -1,4 +1,4 @@
-package me.pumpkinbear111.bigredbutton.buttons;
+package me.pumpkinbear111.bigredbutton.buttons.green;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -100,8 +100,6 @@ public class green_button_grass_block_generation {
 
         blockPos = new BlockPos(x - 3, y, z - 1);
         world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        //
 
         blockPos = new BlockPos(x, y, z + 3);
         world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);

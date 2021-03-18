@@ -1,6 +1,8 @@
 package me.pumpkinbear111.bigredbutton.buttons;
 
 import me.pumpkinbear111.bigredbutton.Bigredbutton;
+import me.pumpkinbear111.bigredbutton.buttons.green.green_button_grass_block_generation;
+import me.pumpkinbear111.bigredbutton.buttons.green.green_button_plant_generation;
 import me.pumpkinbear111.bigredbutton.util.Lightning;
 import me.pumpkinbear111.bigredbutton.util.RegistryHandler;
 import net.minecraft.block.*;
@@ -62,6 +64,7 @@ public class buttons {
             event.getWorld().explode(null, x, y, z, 3, Explosion.Mode.NONE);
 
             green_button_grass_block_generation.placeTheBlocks(world, x, y, z);
+            green_button_plant_generation.placeTheBlocks(world, x, y + 1, z);
 
         }
 
