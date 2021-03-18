@@ -2,7 +2,6 @@ package me.pumpkinbear111.bigredbutton.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.state.DirectionProperty;
@@ -17,13 +16,13 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.stream.Stream;
 
-public class blue_button extends Block {
+public class green_button extends Block {
 
     // the old one that worked:
     //    public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
     public static final DirectionProperty FACING = DirectionProperty.create(Direction.NORTH.getName());
 
-    public blue_button() {
+    public green_button() {
         super(Properties.of(Material.STONE)
                 .strength(5, 0)
                 .sound(SoundType.STONE)

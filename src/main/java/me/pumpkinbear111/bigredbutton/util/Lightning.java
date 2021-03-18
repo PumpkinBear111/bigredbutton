@@ -8,7 +8,7 @@ import net.minecraft.world.World;
 
 public class Lightning {
 
-    public static void summonLightning(int xpositon, int yposition, int zposition, World world) {
+    public static void summon(int xpositon, int yposition, int zposition, World world) {
 
         BlockPos blockPos = new BlockPos(xpositon, yposition, zposition);
 

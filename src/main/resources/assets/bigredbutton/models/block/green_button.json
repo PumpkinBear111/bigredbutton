@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "block/stone",
-		"1": "block/blue_concrete",
+		"1": "block/lime_concrete",
 		"particle": "block/stone"
 	},
 	"elements": [

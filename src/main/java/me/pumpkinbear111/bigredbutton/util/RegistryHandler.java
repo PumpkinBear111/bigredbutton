@@ -1,7 +1,7 @@
 package me.pumpkinbear111.bigredbutton.util;
 
 import me.pumpkinbear111.bigredbutton.blocks.BlockItemBase;
-import me.pumpkinbear111.bigredbutton.blocks.blue_button;
+import me.pumpkinbear111.bigredbutton.blocks.green_button;
 import me.pumpkinbear111.bigredbutton.blocks.red_button;
 import me.pumpkinbear111.bigredbutton.blocks.yellow_button;
 import net.minecraft.block.Block;
@@ -22,12 +22,12 @@ public class RegistryHandler {
 
     public static final RegistryObject<Block> RED_BUTTON = BLOCKS.register("red_button", red_button::new);
     public static final RegistryObject<Block> YELLOW_BUTTON = BLOCKS.register("yellow_button", yellow_button::new);
-    public static final RegistryObject<Block> BLUE_BUTTON = BLOCKS.register("blue_button", blue_button::new);
+    public static final RegistryObject<Block> GREEN_BUTTON = BLOCKS.register("green_button", green_button::new);
 
     // Block Items
     public static final RegistryObject<Item> RED_BUTTON_ITEM = ITEMS.register("red_button_item", () -> new BlockItemBase(RED_BUTTON.get()));
     public static final RegistryObject<Item> YELLOW_BUTTON_ITEM = ITEMS.register("yellow_button_item", () -> new BlockItemBase(YELLOW_BUTTON.get()));
-    public static final RegistryObject<Item> BLUE_BUTTON_ITEM = ITEMS.register("blue_button_item", () -> new BlockItemBase(BLUE_BUTTON.get()));
+    public static final RegistryObject<Item> GREEN_BUTTON_ITEM = ITEMS.register("green_button_item", () -> new BlockItemBase(GREEN_BUTTON.get()));
 
     // Items
 

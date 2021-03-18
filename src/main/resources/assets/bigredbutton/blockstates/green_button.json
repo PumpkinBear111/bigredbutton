@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "bigredbutton:block/green_button" }
+  }
+}
