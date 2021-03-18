@@ -17,7 +17,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = Bigredbutton.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
-public class ClientEvents {
+public class events {
 
     @SubscribeEvent
     public static void onRightClick(final PlayerInteractEvent.RightClickBlock event) {
@@ -29,11 +29,12 @@ public class ClientEvents {
         BlockPos blockPos = new BlockPos(x, y, z);
         Block block = event.getWorld().getBlockState(blockPos).getBlock();
 
-        if(/*event.getWorld().isRemote() && */block.equals(RegistryHandler.RED_BUTTON.get())) {
+        // Red Button
+        if(block.equals(RegistryHandler.RED_BUTTON.get())) {
 
             System.out.println("Big Red Button Pressed");
 
-            event.getWorld().createExplosion(null, x - .5, y, z - .5, 15, Explosion.Mode.DESTROY);
+            event.getWorld().explode(null, x - .5, y, z - .5, 15, Explosion.Mode.DESTROY);
 
             block = null;
 
@@ -41,11 +42,12 @@ public class ClientEvents {
 
         }
 
-        if(/*event.getWorld().isRemote() && */block.equals(RegistryHandler.YELLOW_BUTTON.get())) {
+        // Yellow Button
+        if(block.equals(RegistryHandler.YELLOW_BUTTON.get())) {
 
             System.out.println("Big Yellow Button Pressed");
 
-            event.getWorld().createExplosion(null, x - .5, y, z - .5, 17, Explosion.Mode.DESTROY);
+            event.getWorld().explode(null, x - .5, y, z - .5, 17, Explosion.Mode.DESTROY);
 
             // Summon Lightning
             Lightning.summonLightning(blockPos.getX(), blockPos.getY(), blockPos.getZ(), event.getWorld());

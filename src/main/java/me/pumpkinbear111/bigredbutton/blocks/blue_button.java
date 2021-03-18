@@ -17,12 +17,14 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.stream.Stream;
 
-public class red_button extends Block {
+public class blue_button extends Block {
 
+    // the old one that worked:
+    //    public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
     public static final DirectionProperty FACING = DirectionProperty.create(Direction.NORTH.getName());
 
-    public red_button() {
-        super(Block.Properties.of(Material.STONE)
+    public blue_button() {
+        super(Properties.of(Material.STONE)
                 .strength(5, 0)
                 .sound(SoundType.STONE)
                 .requiresCorrectToolForDrops()

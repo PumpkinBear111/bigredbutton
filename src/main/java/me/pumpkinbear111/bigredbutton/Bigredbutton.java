@@ -38,8 +38,8 @@ public class Bigredbutton {
 
     public static final ItemGroup TAB = new ItemGroup("bigbuttontab") {
 
-        @Override
-        public ItemStack createIcon() {
+       @Override
+        public ItemStack makeIcon() {
             return new ItemStack(RegistryHandler.RED_BUTTON_ITEM.get());
         }
 

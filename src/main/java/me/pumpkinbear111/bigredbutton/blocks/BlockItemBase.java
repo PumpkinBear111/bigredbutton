@@ -8,7 +8,7 @@ public class BlockItemBase extends BlockItem {
 
     public BlockItemBase(Block block) {
 
-        super(block, new Properties().group(Bigredbutton.TAB));
+        super(block, new Properties().tab(Bigredbutton.TAB));
 
     }
 }

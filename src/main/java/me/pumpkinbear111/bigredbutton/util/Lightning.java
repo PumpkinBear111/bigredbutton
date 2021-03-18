@@ -13,8 +13,8 @@ public class Lightning {
         BlockPos blockPos = new BlockPos(xpositon, yposition, zposition);
 
         LightningBoltEntity lightningboltentity = EntityType.LIGHTNING_BOLT.create(world);
-        lightningboltentity.moveForced(Vector3d.copyCenteredHorizontally(blockPos));
-        world.addEntity(lightningboltentity);
+        lightningboltentity.moveTo(Vector3d.atBottomCenterOf(blockPos));
+        world.addFreshEntity(lightningboltentity);
 
     }
 
