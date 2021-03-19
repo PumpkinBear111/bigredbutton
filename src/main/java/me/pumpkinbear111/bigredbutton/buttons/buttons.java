@@ -2,7 +2,9 @@ package me.pumpkinbear111.bigredbutton.buttons;
 
 import me.pumpkinbear111.bigredbutton.Bigredbutton;
 import me.pumpkinbear111.bigredbutton.buttons.green.green_button_grass_block_generation;
+import me.pumpkinbear111.bigredbutton.buttons.green.green_button_oak_leave_generation;
 import me.pumpkinbear111.bigredbutton.buttons.green.green_button_plant_generation;
+import me.pumpkinbear111.bigredbutton.buttons.green.green_button_oak_log_generation;
 import me.pumpkinbear111.bigredbutton.util.Lightning;
 import me.pumpkinbear111.bigredbutton.util.RegistryHandler;
 import net.minecraft.block.*;
@@ -65,6 +67,10 @@ public class buttons {
 
             green_button_grass_block_generation.placeTheBlocks(world, x, y, z);
             green_button_plant_generation.placeTheBlocks(world, x, y + 1, z);
+            green_button_oak_log_generation.generate(world, x - 1, y + 1, z - 2);
+            green_button_oak_leave_generation.generateLower(world, x, y, z);
+            green_button_oak_leave_generation.generateUpper(world, x - 1, y + 5, z - 2);
+            green_button_oak_leave_generation.generateUpper(world, x - 1, y + 6, z - 2);
 
         }
 
