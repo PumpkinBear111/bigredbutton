@@ -1,6 +1,7 @@
 package me.pumpkinbear111.bigredbutton.buttons;
 
 import me.pumpkinbear111.bigredbutton.Bigredbutton;
+import me.pumpkinbear111.bigredbutton.buttons.blue.blue_button_generation;
 import me.pumpkinbear111.bigredbutton.buttons.green.green_button_grass_block_generation;
 import me.pumpkinbear111.bigredbutton.buttons.green.green_button_oak_leave_generation;
 import me.pumpkinbear111.bigredbutton.buttons.green.green_button_plant_generation;
@@ -71,6 +72,15 @@ public class buttons {
             green_button_oak_leave_generation.generateLower(world, x, y, z);
             green_button_oak_leave_generation.generateUpper(world, x - 1, y + 5, z - 2);
             green_button_oak_leave_generation.generateUpper(world, x - 1, y + 6, z - 2);
+
+        }
+
+        // Green Button
+        if(block.equals(RegistryHandler.BLUE_BUTTON.get())) {
+
+            event.getWorld().explode(null, x, y, z, 3, Explosion.Mode.NONE);
+
+            blue_button_generation.create(world, x - 2, y, z);
 
         }
 
