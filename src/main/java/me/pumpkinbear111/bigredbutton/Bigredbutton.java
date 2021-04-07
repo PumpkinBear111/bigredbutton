@@ -36,11 +36,11 @@ public class Bigredbutton {
     };
 
     private void setup(final FMLCommonSetupEvent event) {
-
+        // placeholder for future stuff
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-
+        // placeholder for future stuff
     }
 }
 

@@ -18,8 +18,6 @@ import java.util.stream.Stream;
 
 public class green_button extends Block {
 
-    // the old one that worked:
-    //    public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
     public static final DirectionProperty FACING = DirectionProperty.create(Direction.NORTH.getName());
 
     public green_button() {

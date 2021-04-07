@@ -23,9 +23,9 @@ public class buttons {
     @SubscribeEvent
     public static void onRightClick(final PlayerInteractEvent.RightClickBlock event) {
 
-        int x = event.getPos().getX();
-        int y = event.getPos().getY();
-        int z = event.getPos().getZ();
+        int x = event.getPos().getX(),
+            y = event.getPos().getY(),
+            z = event.getPos().getZ();
 
         World world = event.getWorld();
 
@@ -39,44 +39,38 @@ public class buttons {
 
             block = null;
 
-            return;
-
         }
 
         // Yellow Button
-        if(block.equals(RegistryHandler.YELLOW_BUTTON.get())) {
+        else if(block.equals(RegistryHandler.YELLOW_BUTTON.get())) {
 
             world.explode(null, x, y, z, 17, Explosion.Mode.DESTROY);
 
             // Summon Lightning
-            Lightning.summon(blockPos.getX(), blockPos.getY(), blockPos.getZ(), world);
-            Lightning.summon(blockPos.getX() + 2, blockPos.getY(), blockPos.getZ(), world);
-            Lightning.summon(blockPos.getX() - 2, blockPos.getY(), blockPos.getZ(), world);
-            Lightning.summon(blockPos.getX(), blockPos.getY(), blockPos.getZ() + 2, world);
-            Lightning.summon(blockPos.getX(), blockPos.getY(), blockPos.getZ() - 2, world);
+            Lightning.summon(x, y, z, world);
+            Lightning.summon(x + 2, y, z, world);
+            Lightning.summon(x - 2, y, z, world);
+            Lightning.summon(x, y, z + 2, world);
+            Lightning.summon(x, y, z - 2, world);
 
             block = null;
 
-            return;
-
         }
 
         // Green Button
-        if(block.equals(RegistryHandler.GREEN_BUTTON.get())) {
+        else if(block.equals(RegistryHandler.GREEN_BUTTON.get())) {
 
             event.getWorld().explode(null, x, y, z, 3, Explosion.Mode.NONE);
 
-            green_button_grass_block_generation.placeTheBlocks(world, x, y, z);
-            green_button_plant_generation.placeTheBlocks(world, x, y + 1, z);
-            green_button_oak_log_generation.generate(world, x - 1, y + 1, z - 2);
-            green_button_oak_leave_generation.generateLower(world, x, y, z);
-            green_button_oak_leave_generation.generateUpper(world, x - 1, y + 5, z - 2);
-            green_button_oak_leave_generation.generateUpper(world, x - 1, y + 6, z - 2);
+            green_button_grass_block_generation.makeBlocks(world, x, y, z);
+            green_button_plant_generation.makePlants(world, x, y + 1, z - 1);
+            green_button_oak_leave_generation.makeLeaves(world, x, y, z);
+            green_button_oak_log_generation.makeLogs(world, x - 1, y + 1, z - 3);
 
         }
 
         // Green Button
-        if(block.equals(RegistryHandler.BLUE_BUTTON.get())) {
+        else if(block.equals(RegistryHandler.BLUE_BUTTON.get())) {
 
             event.getWorld().explode(null, x, y, z, 3, Explosion.Mode.NONE);
 

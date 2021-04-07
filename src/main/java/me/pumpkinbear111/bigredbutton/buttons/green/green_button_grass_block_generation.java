@@ -6,120 +6,20 @@ import net.minecraft.world.World;
 
 public class green_button_grass_block_generation {
 
-    public static void placeTheBlocks(World world, int x, int y, int z) {
+    public static void makeBlocks(World world, int x, int y, int z) {
 
-        BlockPos blockPos = new BlockPos(x, y, z);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
+        x -= 3;
+        z -= 4;
 
-        blockPos = new BlockPos(x + 1, y, z);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
+        BlockPos blockPos;
 
-        blockPos = new BlockPos(x + 2, y, z);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
+        for(int i = 1; i < 48; i++) {
+            if( i == 6 || i == 42 )
+                continue;
 
-        blockPos = new BlockPos(x - 1, y, z);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x - 2, y, z);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x, y, z + 1);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x, y, z + 2);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x, y, z - 1);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x, y, z - 2);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x -1, y, z - 1);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x -1, y, z - 2);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x - 2, y, z - 1);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x - 2, y, z - 2);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x + 1, y, z + 1);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x + 1, y, z + 2);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x + 2, y, z + 1);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x + 2, y, z + 2);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x - 1, y, z + 1);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x - 1, y, z + 2);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x - 2, y, z + 1);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x - 2, y, z + 2);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x + 1, y, z - 1);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x + 1, y, z - 2);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x + 2, y, z - 1);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x + 2, y, z - 2);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x + 3, y, z);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x + 3, y, z + 1);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x + 3, y, z - 1);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x - 3, y, z);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x - 3, y, z + 1);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x - 3, y, z - 1);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x, y, z + 3);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x + 1, y, z + 3);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x - 1, y, z + 3);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x, y, z - 3);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x - 1, y, z - 3);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-        blockPos = new BlockPos(x + 1, y, z - 3);
-        world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
-
-
+            blockPos = new BlockPos(x + i % 7, y, z + i / 7);
+            world.setBlock(blockPos, Blocks.GRASS_BLOCK.defaultBlockState(), 1);
+        }
 
     }
 
