@@ -4,6 +4,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.passive.fish.TropicalFishEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
@@ -14,14 +15,14 @@ public class blue_button_generation {
 
         generateLayer(world, x, y, z, Blocks.SAND.defaultBlockState());
 
-        for( int yinc = 0; yinc < 5; yinc++ ) {
+        y++;
+        for( int yinc = 0; yinc < 4; yinc++ ) {
 
             generateLayer(world, x, y + yinc, z, Blocks.WATER.defaultBlockState());
 
         }
 
-        generatePlantLayer(world, x, y + 1, z);
-
+        generatePlantLayer(world, x, y, z);
         spawnAnimals(world, x, y + 2, z);
 
     }
@@ -41,17 +42,21 @@ public class blue_button_generation {
     public static void spawnAnimals(World world, int x, int y, int z) {
 
         BlockPos blockPos = new BlockPos(x, y, z);
-        Entity entity1 = EntityType.TROPICAL_FISH.create(world);
+        TropicalFishEntity entity1 = new TropicalFishEntity(EntityType.TROPICAL_FISH, world);
+        entity1.setVariant(118161664);
         entity1.moveTo(Vector3d.atBottomCenterOf(blockPos));
         world.addFreshEntity(entity1);
 
         blockPos = new BlockPos(x + 3, y - 1, z - 2);
-        Entity entity2 = EntityType.TROPICAL_FISH.create(world);
+        TropicalFishEntity entity2 = new TropicalFishEntity(EntityType.TROPICAL_FISH, world);
+        entity2.setVariant(65536);
         entity2.moveTo(Vector3d.atBottomCenterOf(blockPos));
         world.addFreshEntity(entity2);
 
+
         blockPos = new BlockPos(x - 3, y + 1, z + 2);
-        Entity entity3 = EntityType.TROPICAL_FISH.create(world);
+        TropicalFishEntity entity3 = new TropicalFishEntity(EntityType.TROPICAL_FISH, world);
+        entity3.setVariant(67764993);
         entity3.moveTo(Vector3d.atBottomCenterOf(blockPos));
         world.addFreshEntity(entity3);
 

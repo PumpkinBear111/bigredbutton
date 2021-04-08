@@ -12,7 +12,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 
 group = 'me.pumpkinbear111'
-version = '1.0'
+version = '1.16.4-1.0.0'
 archivesBaseName = 'bigredbutton'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'

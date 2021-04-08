@@ -64,7 +64,7 @@ public class buttons {
 
             green_button_grass_block_generation.makeBlocks(world, x, y, z);
             green_button_plant_generation.makePlants(world, x, y + 1, z - 1);
-            green_button_oak_leave_generation.makeLeaves(world, x, y, z);
+            green_button_oak_leave_generation.makeLeaves(world, x, y, z - 1);
             green_button_oak_log_generation.makeLogs(world, x - 1, y + 1, z - 3);
 
         }
